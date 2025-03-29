@@ -38,8 +38,8 @@ myproject/
 ## Setup Instructions
 ### 1. Clone the repository:
 ```bash
-git clone <repository_url>
-cd <repository_name>
+git clone https://github.com/tomeir2105/multitool
+cd multitool
 ```
 
 ### 2. Make the script executable:
