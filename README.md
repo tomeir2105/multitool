@@ -1,4 +1,4 @@
-# Initial git and venv setup
+# Initial git, venv and folder setup
 
 ## Description
 This is a project created using the setup script that initializes a Python project structure, installs missing dependencies, sets up a virtual environment, and optionally connects to a GitHub repository.
