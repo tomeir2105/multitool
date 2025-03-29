@@ -55,7 +55,7 @@ chmod +x setup.sh
 ### 4. Follow the prompts to install missing system packages and set up a Python virtual environment.
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+this script is free to use for everyone. 
 
 ## Authors
 - **Meir** - Initial project setup and script creation
