@@ -27,7 +27,7 @@ myproject/
 │       ├── app.py
 │       └── static/
 │       └── templates/
-
+```
 
 ## Requirements
 - `apt` (for installing system packages)
