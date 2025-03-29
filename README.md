@@ -11,7 +11,7 @@ This is a project created using the setup script that initializes a Python proje
 - Customize the setup by adding Python dependencies interactively.
 
 ## My learning remarks
-- This script implements two methods of user interface with getops and readp, while the latter is more comfotable in getting lists.
+- This script implements two methods of user interface with getops and read -p , while the latter is more comfotable in getting lists.
 - When using pipenv, don't forget to export PATH to include ~/.local/bin
 - GitHub Integration using git remote add origin
  
