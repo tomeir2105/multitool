@@ -1,4 +1,14 @@
 #!/usr/bin/env bash
+######################################
+# Created by : Meir
+# Purpose : python packages install script
+# Date : 7/3/25
+# Version : 1
+#set -x
+set -o errexit
+set -o pipefail
+set -o nounset
+#####################################
 
 # Function to install missing packages using apt
 install_missing_packages() {
