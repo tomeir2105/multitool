@@ -48,18 +48,27 @@ venv_init() {
 
     echo "Setting up virtual environment with pipenv..."
 
-    if ! command -v pipenv &>/dev/null; then
+    if ! which pipenv > /dev/null; then
         echo "Installing pipenv via pipx..."
-        pipx install pipenv > /dev/null 2>&1 || { echo "Failed to install pipenv"; return 1; }
+        pipx install pipenv > /dev/null 2>&1
+        if [ $? -ne 0 ]; then
+            echo "Failed to install pipenv"
+            return 1
+        fi
+        
         export PATH="$HOME/.local/bin:$PATH"
     fi
-
     export PIPENV_VENV_IN_PROJECT=1
 
     cd "$full_path" || { echo "Cannot access project directory"; return 1; }
 
     if [[ ! -f Pipfile ]]; then
-        pipenv --python 3 || { echo "Failed to create virtual environment"; return 1; }
+        echo "Creating virtual environment with pipenv..."
+        pipenv --python 3
+        if [ $? -ne 0 ]; then
+            echo "Failed to create virtual environment"
+            return 1
+        fi
     fi
     pipenv lock || { echo "Failed to generate Pipfile.lock"; return 1; }
 
