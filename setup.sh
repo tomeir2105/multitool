@@ -83,13 +83,6 @@ git_connect() {
     fi
 }
 
-# Function to delete the script or project directory
-self_delete() {
-    local path=$1
-    rm -rf "$path"
-    echo "negbook has been deleted"
-}
-
 # Function to create project structure and files
 build_folders_files() {
     local format=$1
@@ -112,18 +105,19 @@ build_folders_files() {
 
 # Function to show help message
 help() {
-    echo "Usage: $0 -p <project_name> -g <git_enabled> -e <venv_enabled> [-u <username> -r <repository>]"
-    echo ""
-    echo "Parameters:"
-    echo "  -p <project_name>   Name of your project"
-    echo "  -g <git_enabled>    Initialize Git repository? [Y/n]"
-    echo "  -e <venv_enabled>   Initialize a virtual environment? [Y/n]"
-    echo "  -u <username>       Your GitHub username (required if git_enabled is Y)"
-    echo "  -r <repository>     The repository name on GitHub (required if git_enabled is Y)"
-    echo ""
-    echo "Example: $0 -p myproject -g Y -e Y -u mygithubuser -r myrepo"
+    echo "Usage: $0 -p <project_name> -g <git_enabled> -e <venv_enabled> [-u <username> -r <repository>]
+
+Parameters:
+  -p <project_name>   Name of your project
+  -g <git_enabled>    Initialize Git repository? [Y/n]
+  -e <venv_enabled>   Initialize a virtual environment? [Y/n]
+  -u <username>       Your GitHub username (required if git_enabled is Y)
+  -r <repository>     The repository name on GitHub (required if git_enabled is Y)
+
+Example: $0 -p myproject -g Y -e Y -u mygithubuser -r myrepo"
     exit 1
 }
+
 
 # Main function to control project setup
 main() {
